@@ -53,6 +53,12 @@ int main() {
 
     cisd(1, 1, data_1e, data_2e);
 
-    printf("[%7.3f %7.3f]\n[%7.3f %7.3f]\n", data_1e[0], data_1e[1], data_1e[2],
-           data_1e[3]);
+    printf("D =\n[%7.3f %7.3f]\n[%7.3f %7.3f]\n\n", data_1e[0], data_1e[1],
+           data_1e[2], data_1e[3]);
+
+    printf("d =\n");
+    for (size_t i = 0; i < 4; i++) {
+        printf("[%7.3f %7.3f %7.3f %7.3f]\n", data_2e[4 * i],
+               data_2e[4 * i + 1], data_2e[4 * i + 2], data_2e[4 * i + 3]);
+    }
 }
